@@ -14,3 +14,14 @@ You can also learn how to make your own kaleidoscopes with our tutorials. Or you
 
 ## 📲 PWA
 Kaleidoscope24 is a progressive web app (PWA) that offers a rich and immersive experience on any device. Whether you want to browse, create, or share content, you can do it all with Kaleidoscope24. To get started, you can visit kaleidoscope24.com [PWA documentation](https://kaleidoscope24.com/pwa.html) and follow the instructions to install the PWA on your desktop or mobile device. You can also access the PWA documentation from the website, where you can find more information about the features and benefits of Kaleidoscope24, as well as some tips and tricks to make the most of your PWA experience. With [pwabuilder.com](https://pwabuilder.com), you can customize your PWA, test its performance, and generate app packages for different platforms.
+
+## Create Kaleidoscope and Mandalas
+<p align="center">
+  <a href="https://kaleidoscope24.com" target="_blank">
+    <img width="700" height="700" src="https://github.com/andiwebs/Kaleidoscope24/blob/main/kaleidoscope12923214235.gif" alt="Create Kaleidoscope and Mandalas kaleidoscope24.com">
+  </a><br> Animated GIF Image kaleidoscope12923214235.gif, 700 x 700 px, 1.61 MB
+</p>
+<p align="center">
+  <a href="https://kaleidoscope24.com" target="_blank">Create Kaleidoscope and Mandalas</a><br>
+  with Kaleidoscope24.com
+</p>
