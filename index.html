@@ -1,488 +1,845 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Creating Kaleidoscopes from Photos with Online Tool</title>
-<meta name="description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
-<meta name="keywords" content="kaleidoscope, mandala, creating, online tool, fractal, psychedelic, art, pattern, symmetry, images, photos, digital, designs, template, colorful, several, flower, colorfulness, artistic, png, jpg, webp, gif">
-<link rel="icon" type="image/png" href="favicon-32x32.png">
-<link href="kaleidoscope.css" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" crossorigin="use-credentials" href="manifest.json">
-<meta property="og:title" content="Creating Kaleidoscopes from Photos with Online Tool">
-<meta property="og:description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
-<meta property="og:url" content="https://kaleidoscope24.com/">
-<meta property="og:image" content="https://kaleidoscope24.com/android-chrome-512x512.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating Kaleidoscopes from Photos with Online Tool</title>
+	<meta name="description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
+	<meta name="keywords" content="kaleidoscope, mandala, creating, online tool, fractal, psychedelic, art, pattern, symmetry, images, photos, digital, designs, template, colorful, several, flower, colorfulness, artistic, png, jpg, webp, gif">
+	<link rel="icon" type="image/png" href="favicon-32x32.png">
+	<link href="kaleidoscope.css" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" crossorigin="use-credentials" href="manifest.json">
+	<meta property="og:title" content="Creating Kaleidoscopes from Photos with Online Tool">
+	<meta property="og:description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
+	<meta property="og:url" content="https://kaleidoscope24.com/">
+	<meta property="og:image" content="https://kaleidoscope24.com/android-chrome-512x512.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
 
-<meta itemprop="name" content="Creating Kaleidoscopes from Photos with Online Tool">
-<meta itemprop="image" content="https://kaleidoscope24.com/android-chrome-512x512.png">
-<meta itemprop="url" content="https://kaleidoscope24.com/">
-<meta itemprop="description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
-<meta itemprop="keywords" content="kaleidoscope, mandala, creating, online tool, fractal, psychedelic, art, pattern, symmetry, images, photos, digital, designs, template, colorful, several, flower, colorfulness, artistic, png, jpg, webp, gif">
+	<meta itemprop="name" content="Creating Kaleidoscopes from Photos with Online Tool">
+	<meta itemprop="image" content="https://kaleidoscope24.com/android-chrome-512x512.png">
+	<meta itemprop="url" content="https://kaleidoscope24.com/">
+	<meta itemprop="description" content="Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities">
+	<meta itemprop="keywords" content="kaleidoscope, mandala, creating, online tool, fractal, psychedelic, art, pattern, symmetry, images, photos, digital, designs, template, colorful, several, flower, colorfulness, artistic, png, jpg, webp, gif">
 
-<meta name="msapplication-TileColor" content="#050577">
-<meta name="theme-color" content="#050577">
-<meta name="color-scheme" content="dark light">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<style id="csshelptoool">
-.tooltip:hover div,.tooltip:hover #otherscolor{display:block;}
-</style>
-<style id="csscansize">
-#wcansize:before,#hcansize:before{content:'';}
-</style>
-<style id="cansizeview">
-#canvasFrame:before{content:'Canvas (100%)';}
-</style>
-<style id="cssmodes">
-label k{filter:invert(100%) drop-shadow(0 0 3px #000);}
-</style>
-<style>
-html, body {margin:0;height: 100vh;}
-body{padding:0;background-color:#222;font-family:Arial,sans serif;font-size:12px;color:#eee;margin-top: 45px;height: calc((100vh - 140px)*1);}
-body.geomchange{margin-top:0;height: calc((100vh - 185px)*1);}
-header,#canvasFrame,#textinhalt,footer{box-sizing:border-box;max-width:1120px;margin:0 auto;background-color:#373737;}
-#textinhalt a{color: #809fff;}
-header{position:fixed;z-index:9999;left:env(titlebar-area-x, 0);top:env(titlebar-area-y, 0);width:env(titlebar-area-width, 100%);height:env(titlebar-area-height, 40px);app-region:drag;background:#050577;vertical-align:top;max-width:inherit;}
-.geomchange header{position:relative;max-width:1120px;margin:0 auto;background:transparent;height:auto;}
-footer{text-align:center;padding:16px;bottom:0;border-top:1px solid #999;}
-#canvasFrame{min-height:750px;background-color:inherit;}
-a{outline:none;text-decoration:none;}
-#Kaleidosh3{color:#fff;background:red;
-background:linear-gradient(to right,orange,red,yellow,green,cyan,#5656ff,violet);-webkit-background-clip:text;background-clip:text;display:inline-block;
--webkit-text-fill-color:transparent;margin:0 15px 0 5px;font-size:24px;}
-.geomchange #Kaleidosh3{margin:5px;font-size:64px;font-size:4cqw;}
-@media screen and (max-width:780px){#Kaleidosh3{position:fixed;left:0;z-index:-1;font-size:12px;}header{text-align:right;}}
-@media screen and (max-width:400px){.geomchange #Kaleidosh3{max-width:28px;}}
-@media screen and (min-width:1120px){.geomchange #Kaleidosh3{font-size:47px;}}
-#Kaleidosh3 b{font-size:50%}
-#Kaleidosh3:before{display: inline-block;content:'';left:34px;width: 26px;height: 26px;background-image: url(favicon-32x32.png);background-size: 28px 28px;background-repeat: no-repeat;}
-.geomchange #Kaleidosh3:before{width:64px;height:64px;background-image: url(logo64.png);background-position: left top;background-size: 64px 64px;}
-#menuleft{text-align:right;display:inline-block;vertical-align:top;float:none;}
-.geomchange #menuleft{float:right;}
-.imageAddView{text-decoration:none;padding:0;margin:10px;color:transparent;display:inline-block;z-index:-1;}
-#textinhalt{border-radius:9px;padding:5px;margin-top: 5px;font-size: 14px;text-align: justify;}
-#textinhalt img{float:right;margin:7px;}
-#canvasFrame,#install_but{display:none;}
-#startKaleidoBT{font-size: 16px;}
-	.shapeegg{float:left;width:70px;height:60px;background-color:#8b8c8d;shape-margin:10px;clip-path:polygon(0 0, 0 50px, 50px 0);shape-outside:polygon(0 0, 0 50px, 50px 0);}
-button,#menuleft a,#menufoter a{background:#0dccea;background-image:linear-gradient(#0dccea, #0d70ea);border:1px solid #555;border-radius:4px;box-sizing:border-box;color:#fff;cursor:pointer;padding:3px 6px;text-align:center;-webkit-user-select:none;user-select:none;box-shadow:0px 2px 10px #777,0 0 0 1px #aaa inset;touch-action:manipulation;-webkit-app-region:no-drag;app-region: no-drag;}
-#menuleft a,#menufoter a{display:inline-block;margin:3px;}
-button:hover,#menuleft a:hover,#menufoter a:hover{box-shadow:0 0 8px #000 inset;}
-button#lightdark{width:26px;height:24px;margin:4px;vertical-align:middle;filter:invert();}
-	#textinhalt a:hover{color: #07aa05;}
+	<meta name="msapplication-TileColor" content="#050577">
+	<meta name="theme-color" content="#050577">
+	<meta name="color-scheme" content="dark light">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style id="csshelptoool">
+		.tooltip:hover div,
+		.tooltip:hover #otherscolor {
+			display: block;
+		}
+	</style>
+	<style id="csscansize">
+		#wcansize:before,
+		#hcansize:before {
+			content: '';
+		}
+	</style>
+	<style id="cansizeview">
+		#canvasFrame:before {
+			content: 'Canvas (100%)';
+		}
+	</style>
+	<style id="cssmodes">
+		label k {
+			filter: invert(100%) drop-shadow(0 0 3px #000);
+		}
+	</style>
+	<style>
+		html,
+		body {
+			margin: 0;
+			height: 100vh;
+		}
 
-@media screen and (max-width:810px){
-.geomchange header {z-index:0;height:40px;text-align: right;}
-#startupHelp{font-size:150%;}
-#textinhalt{display:inline-block;}
-#textinhalt img{float:none; max-width: calc(100% - 10px);width: auto;height: auto;margin:5px auto;display: block;}
-.geomchange #Kaleidosh3{font-size:3cqw;position:fixed;left:0;z-index:-1;}
-.geomchange #Kaleidosh3:before{width:32px;height:32px;background-image: url(favicon-32x32.png);background-size:32px 32px;}
-#allImages,#gifImages{right:0;margin:0;}
-#filtercss{display:block !important;}
-#sampleimage{max-width:98%;height:auto;margin:0;}
-.imageAddView{margin:2px;}
-}
-</style>
+		body {
+			padding: 0;
+			background-color: #222;
+			font-family: Arial, sans serif;
+			font-size: 12px;
+			color: #eee;
+			margin-top: 45px;
+			height: calc((100vh - 140px)*1);
+		}
+
+		body.geomchange {
+			margin-top: 0;
+			height: calc((100vh - 185px)*1);
+		}
+
+		header,
+		#canvasFrame,
+		#textinhalt,
+		footer {
+			box-sizing: border-box;
+			max-width: 1120px;
+			margin: 0 auto;
+			background-color: #373737;
+		}
+
+		#textinhalt a {
+			color: #809fff;
+		}
+
+		header {
+			position: fixed;
+			z-index: 9999;
+			left: env(titlebar-area-x, 0);
+			top: env(titlebar-area-y, 0);
+			width: env(titlebar-area-width, 100%);
+			height: env(titlebar-area-height, 40px);
+			app-region: drag;
+			background: #050577;
+			vertical-align: top;
+			max-width: inherit;
+		}
+
+		.geomchange header {
+			position: relative;
+			max-width: 1120px;
+			margin: 0 auto;
+			background: transparent;
+			height: auto;
+		}
+
+		footer {
+			text-align: center;
+			padding: 16px;
+			bottom: 0;
+			border-top: 1px solid #999;
+		}
+
+		#canvasFrame {
+			min-height: 750px;
+			background-color: inherit;
+		}
+
+		a {
+			outline: none;
+			text-decoration: none;
+		}
+
+		#Kaleidosh3 {
+			color: #fff;
+			background: red;
+			background: linear-gradient(to right, orange, red, yellow, green, cyan, #5656ff, violet);
+			-webkit-background-clip: text;
+			background-clip: text;
+			display: inline-block;
+			-webkit-text-fill-color: transparent;
+			margin: 0 15px 0 5px;
+			font-size: 24px;
+		}
+
+		.geomchange #Kaleidosh3 {
+			margin: 5px;
+			font-size: 64px;
+			font-size: 4cqw;
+		}
+
+		@media screen and (max-width:780px) {
+			#Kaleidosh3 {
+				position: fixed;
+				left: 0;
+				z-index: -1;
+				font-size: 12px;
+			}
+
+			header {
+				text-align: right;
+			}
+		}
+
+		@media screen and (max-width:400px) {
+			.geomchange #Kaleidosh3 {
+				max-width: 28px;
+			}
+		}
+
+		@media screen and (min-width:1120px) {
+			.geomchange #Kaleidosh3 {
+				font-size: 47px;
+			}
+		}
+
+		#Kaleidosh3 b {
+			font-size: 50%
+		}
+
+		#Kaleidosh3:before {
+			display: inline-block;
+			content: '';
+			left: 34px;
+			width: 26px;
+			height: 26px;
+			background-image: url(favicon-32x32.png);
+			background-size: 28px 28px;
+			background-repeat: no-repeat;
+		}
+
+		.geomchange #Kaleidosh3:before {
+			width: 64px;
+			height: 64px;
+			background-image: url(logo64.png);
+			background-position: left top;
+			background-size: 64px 64px;
+		}
+
+		#menuleft {
+			text-align: right;
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+		}
+
+		.geomchange #menuleft {
+			float: right;
+		}
+
+		.imageAddView {
+			text-decoration: none;
+			padding: 0;
+			margin: 10px;
+			color: transparent;
+			display: inline-block;
+			z-index: -1;
+		}
+
+		#textinhalt {
+			border-radius: 9px;
+			padding: 5px;
+			margin-top: 5px;
+			font-size: 14px;
+			text-align: justify;
+		}
+
+		#textinhalt img {
+			float: right;
+			margin: 7px;
+		}
+
+		#canvasFrame,
+		#install_but {
+			display: none;
+		}
+
+		#startKaleidoBT {
+			font-size: 16px;
+		}
+
+		.shapeegg {
+			float: left;
+			width: 70px;
+			height: 60px;
+			background-color: #8b8c8d;
+			shape-margin: 10px;
+			clip-path: polygon(0 0, 0 50px, 50px 0);
+			shape-outside: polygon(0 0, 0 50px, 50px 0);
+		}
+
+		button,
+		#menuleft a,
+		#menufoter a {
+			background: #0dccea;
+			background-image: linear-gradient(#0dccea, #0d70ea);
+			border: 1px solid #555;
+			border-radius: 4px;
+			box-sizing: border-box;
+			color: #fff;
+			cursor: pointer;
+			padding: 3px 6px;
+			text-align: center;
+			-webkit-user-select: none;
+			user-select: none;
+			box-shadow: 0px 2px 10px #777, 0 0 0 1px #aaa inset;
+			touch-action: manipulation;
+			-webkit-app-region: no-drag;
+			app-region: no-drag;
+		}
+
+		#menuleft a,
+		#menufoter a {
+			display: inline-block;
+			margin: 3px;
+		}
+
+		button:hover,
+		#menuleft a:hover,
+		#menufoter a:hover {
+			box-shadow: 0 0 8px #000 inset;
+		}
+
+		button#lightdark {
+			width: 26px;
+			height: 24px;
+			margin: 4px;
+			vertical-align: middle;
+			filter: invert();
+		}
+
+		#textinhalt a:hover {
+			color: #07aa05;
+		}
+
+		@media screen and (max-width:810px) {
+			.geomchange header {
+				z-index: 0;
+				height: 40px;
+				text-align: right;
+			}
+
+			#startupHelp {
+				font-size: 150%;
+			}
+
+			#textinhalt {
+				display: inline-block;
+			}
+
+			#textinhalt img {
+				float: none;
+				max-width: calc(100% - 10px);
+				width: auto;
+				height: auto;
+				margin: 5px auto;
+				display: block;
+			}
+
+			.geomchange #Kaleidosh3 {
+				font-size: 3cqw;
+				position: fixed;
+				left: 0;
+				z-index: -1;
+			}
+
+			.geomchange #Kaleidosh3:before {
+				width: 32px;
+				height: 32px;
+				background-image: url(favicon-32x32.png);
+				background-size: 32px 32px;
+			}
+
+			#allImages,
+			#gifImages {
+				right: 0;
+				margin: 0;
+			}
+
+			#filtercss {
+				display: block !important;
+			}
+
+			#sampleimage {
+				max-width: 98%;
+				height: auto;
+				margin: 0;
+			}
+
+			.imageAddView {
+				margin: 2px;
+			}
+		}
+	</style>
 </head>
+
 <body class="geomchange">
-<header>
-	<h3 id="Kaleidosh3">Kaleidoscope24<b>.com</b></h3>
-	<div id="menuleft">
-<a href="javascript:startKaleidoJS()" id="CreateKalei">Create Kaleidoscope</a> <a href="faq.html">FAQ</a> <a href="features.html">Features</a> <a href="about.html">About</a>
-	<div class="inlineblock tooltip" id="lightdarkdv">
-	<button id="lightdark" onclick="setStyleBlWt(77)"> </button>
-	<div><b>Click the button to toggle between<br>light and dark mode for this page</b></div>
-	</div>
-	<button id="install_but" class="tooltip" hidden>Install
-	<div><b>Install Kaleidoscope as APP (PWA)<br>for offline creating. No app store needed!</b></div></button>
-	<button id="shareAsWeb" onclick="shareAsWebs();return false" class="tooltip"> 
-	<div><b>Share as title: Kaleidoscope24.com<br>and url: https://kaleidoscope24.com</b></div></button>
-	</div>
-</header>
+	<header>
+		<h3 id="Kaleidosh3">Kaleidoscope24<b>.com</b></h3>
+		<div id="menuleft">
+			<a href="javascript:startKaleidoJS()" id="CreateKalei">Create Kaleidoscope</a>
+			<div class="inlineblock tooltip" id="lightdarkdv">
+				<button id="lightdark" onclick="setStyleBlWt(77)"> </button>
+				<div><b>Click the button to toggle between<br>light and dark mode for this page</b></div>
+			</div>
+			<button id="install_but" class="tooltip" hidden>Install
+				<div><b>Install Kaleidoscope as APP (PWA)<br>for offline creating. No app store needed!</b></div>
+			</button>
+			<button id="shareAsWeb" onclick="shareAsWebs();return false" class="tooltip">
+				<div><b>Share as title: Kaleidoscope24.com<br>and url: https://kaleidoscope24.com</b></div>
+			</button>
+		</div>
+	</header>
 	<div id="canvasFrame">
 		<canvas id="kaleidoCanvas" width="700" height="700"></canvas>
 		<canvas id="textCanvas" class="kaleidoCanvasCr"></canvas>
-	<div id="progress-bar"><img src="kaleidoscope-24t.gif" alt="Kaleidoscope progress gif"></div>
-	<div id="gifImages">
-	<p id="imagetgif" class="imagetext" title="Click to close" onclick="gifKaleidoCl()">
-	Kaleidoscope to GIF-Image
-	<button onclick="gifKaleidoCl()" id="closeimg1">X</button></p>
-	<img id="sampleimage" src="kaleidoscope-24.gif" class="imageAddView" alt="Create GIF Image">
-	<form class="formbox" id="sampleimgif">
-        <div class="inlineblock">Frames: <k id="GifLng">5</k><br><input type="range" id="inputGifLng" min="1" max="10" value="5" step="1"></div> 
-		<div class="inlineblock">Delay: <k id="GifDelay">0.7 Sec.</k><br><input type="range" id="inputGifDelay" min="100" max="1500" value="700" step="100"></div> 
-		<label id="gifForShare" for="gifShare" class="tooltip"><div><b>Animate text: spread on frames</b></div><input type="checkbox" id="gifShare" onclick="gifShareSet()">Animate text</label>
-		<button id="saveAs123Gif" onclick="buildAniGIF();return false">Create animated GIF</button><br>
-		<span id="allgifdone">---</span> <button id="saveAs1Gif" onclick="saveKalendoscopeImGif();return false">Save as GIF image</button> <span id="allgifsdone">---</span> 
-		<button id="shareAsGif" onclick="shareAsGifs();return false"> </button>
-	</form>
-	<button id="gifImagesCl" onclick="gifKaleidoCl();return false">CLOSE</button>
-	</div>
-	<div id="KaleidosSp">
-	<div id="ownDesignsDiv"></div>
-	<div class="floatleft">
-	<div id="imagesUldiv">
-	<div class="inlineblock tooltip"><div><b>Insert new image or select existing for kaleidoscope</b></div>
-	<button id="fotoInBtn" class="inpbto" onclick="closeAPosDiv();$('allImages').style.display='block';return false">New 🖼️</button>
-	</div>
-	<div class="inlineblock">
-	<div class="inlineblock tooltip"><div><b>Undo and Redo<br>Quick change and clear History</b></div>
-	<button id="undoredo" onclick="undoredoHist();return false" disabled>⏴00(00)⏵</button></div><br>
-	<div class="inlineblock tooltip"><div><b>Undo</b></div>
-	<button id="undoText" disabled> </button></div>&nbsp;&nbsp;
-	<div class="inlineblock tooltip"><div><b>Redo</b></div>
-	<button id="redoText" disabled> </button></div></div>
-	<div id="undoredoDiv"><b>
-	<button id="undoredoCl" onclick="closeAPosDiv();return false"> X </button>
-	<em id="slider9b" onclick="closeAPosDiv();">Undo and Redo History: ---</em><br>
-	<button id="resetAllHist" onclick="resetAllHist();return false;">Clear History</button>
-	<input type="range" name="slider9" id="slider9" value="0" min="0" max="0" step="1"></b></div>
-	<div id="allImages">
-	<p id="imagetexts" class="imagetext" title="Click to close" onclick="closeAPosDiv();">Images for Kaleidoscope
-	<button onclick="closeAPosDiv();return false;" id="closeimg">X</button></p>
-	<ul id="imagesUl"></ul>
-	<p id="addImageUrl">New image from URL: <input type="text" id="addImageUrlIn" placeholder="https://www........"><button onclick="startDownload();return false;">Add Image</button></p>
-	<p id="addImageHdd">or click here to select an image from your device: <button onclick="fotoInHdd();return false;">Add Image</button></p>
-	<p>or drag and drop a file from desktop / explorer / other website</p>
-	<p>or press Ctrl+V (Paste) to use an image from your clipboard: <button id="fromClipboard" onclick="pasteImage();return false;">Add Image</button></p>
-	<button class="inlineblock tooltip" onclick="return false;" id="imagesInfo"><div><b>These images are deleted after clearing history, deleting designs and reloading this page<em id="imagesInfo2"></em></b></div>info</button>
-	<ul id="imagesNew"></ul>
-	<button onclick="closeAPosDiv();return false;" id="closeimg2">CLOSE</button>
-	</div> </div>
-	<div id="startupHelp2">Drag mouse over Pattern Position to get started.</div>
-	<div id="svgdiv" ondblclick="myResetFunction()">
-	<svg width="100%" height="100%" id="imageSVG">
-	<defs>
-	<path id="arcPath" class="geom" d="M72,0A72,72 0 0,1 69.54665949281292,18.63497124738149L0,0Z"></path>
-	<clippath id="theClipPath" transform="rotate(0 90 80.68251437630926) translate(54,80.68251437630926)">
-	<path id="theClipPathPath" class="geom" d="M72,0A72,72 0 0,1 69.54665949281292,18.63497124738149L0,0Z"></path>
-	</clippath></defs>
-	<g opacity="0.25">
-	<image id="theImage" x="0" y="0" width="100%" height="100%" xlink:href="data/aaa.jpg"></image>
-	</g><g id="refGroup" transform="rotate(0 90 80.68251437630926) translate(54,80.68251437630926)">
-	<use xlink:href="#arcPath" class="geom"></use></g>
-	<use xlink:href="#theImage" id="svgUseShape" opacity="1" clip-path="url(#theClipPath)"></use>
-	</svg>
-	</div></div><span id="addDesignVi"></span>
-	<fieldset id="fieldsetone"><legend> Forms and Designs <k>X</k></legend>
-	<div class="tooltip"><div><b>Click to set the kaleidoscope shape to a rectangle, circle or selection of 9 others (hexagons, kisrhombilles, stars...)</b></div>
-	<button id="formKalei1" class="fotoformbto" onclick="formKalei(1,0);return false"></button>
-	<button id="formKalei2" class="fotoformbto" onclick="formKalei(2,0);return false"></button>
-	<button id="formKalei3" class="fotoformbto" onclick="formKalei(3,7);return false"></button>
-	<button id="formKalei4" class="fotoformbto" onclick="formKalei(4,8);return false"></button>
-	<button id="formKalei5" class="fotoformbto" onclick="formKalei(5,1);return false"></button>
-	<button id="formKalei6" class="fotoformbto" onclick="formKalei(6,2);return false"></button>
-	<button id="formKalei7" class="fotoformbto" onclick="formKalei(7,3);return false"></button>
-	<button id="formKalei8" class="fotoformbto" onclick="formKalei(8,4);return false"></button>
-	<button id="formKalei9" class="fotoformbto" onclick="formKalei(9,5);return false"></button>
-	<button id="formKalei10" class="fotoformbto" onclick="formKalei(10,6);return false"></button>
-	<button id="formKalei11" class="fotoformbto" onclick="formKalei(11,0);return false"></button>
-	<button id="formKalei12" class="fotoformbto" onclick="formKalei(12,0);return false"></button></div>
-	<div class="inlineblock tooltip"><div><b>Click "Add Design" to save all options as template</b></div>
-	<button id="addDesignbt" onclick="addDesign();return false">Add Design</button></div> 
-	<div class="inlineblock tooltip"><div><b>Click "Own Designs" to view and load saved template</b></div>
-	<button id="ownDesignsbt" onclick="allDesigns(0);return false" disabled>Own Designs</button></div>
-	</fieldset>
-	<fieldset id="fieldsettwo"><legend> Pattern Options <k>X</k></legend>
-	
-	<button id="resetAllFilterEx" onclick="myResetFunction();saveAppToDb(1,1,19);return false;" disabled="true"><label class="tooltip"><div><b>Reset tiling position and options</b></div>R<br>e<br>s<br>e<br>t</label></button>
-	<label class="tooltip"><div><b id="slider0b">Rotate: 0-360° (0°)</b></div><input type="range" onchange="saveAppToDb(1,this.value*1,2)" name="slider0" id="slider0" value="0" min="0" max="360" step="5"><k id="label1"></k></label>
-	<label class="tooltip"><div><b id="slider1b">ZOOM Tiele (40)</b></div><input type="range" onchange="saveAppToDb(2,this.value*1,3)" name="slider1" id="slider1" value="0.4" min="0.2" max="1" step="0.01"><k id="label2"></k></label>
-	<label id="slider22" class="tooltip"><div><b id="slider2b">3-32 SECTORs (12)</b></div><input type="range" onchange="saveAppToDb(3,this.value*1,4)" name="slider2" id="slider2" value="12" min="3" max="32" step="1"><k id="label3"></k></label><br>
-	
-	</fieldset>
-<form id="filtercss">
-<fieldset><legend> Select Image Filters <k>X</k></legend>
-<button id="resetAllFilter" onclick="resetAllCSS();saveAppToDb(2,1,20);return false;" disabled="true">Reset</button>
-<label class="tooltip"><div><b>Brightness</b></div><input type="range" onchange="saveAppToDb(1,this.value*1,5)" name="brightness" value="1" min="0" max="2" step="0.1"><k id="label4"></k></label> 
-<label class="tooltip"><div><b>Contrast</b></div><input type="range" onchange="saveAppToDb(2,this.value*1,6)" name="contrast" value="1" min="0" max="2" step="0.1"><k id="label5"></k></label> 
-<label class="tooltip"><div><b>Color saturation</b></div><input type="range" onchange="saveAppToDb(3,this.value*1,7)" name="saturate" value="1" min="0" max="2" step="0.1"><k id="label6"></k></label> 
-<label class="tooltip"><div><b>Shift hue of a color</b></div><input type="range" onchange="saveAppToDb(4,this.value*1,8)" name="hueRotate" value="0" min="-1" max="1" step="0.1"><k id="label7"></k></label> 
-<label class="tooltip"><div><b>Invert color</b></div><input type="range" onchange="saveAppToDb(5,this.value*1,9)" name="invert" id="invertcolor" value="0" min="0" max="1" step="1"><k id="label8"></k></label>
+		<div id="progress-bar"><img src="kaleidoscope-24t.gif" alt="Kaleidoscope progress gif"></div>
+		<div id="gifImages">
+			<p id="imagetgif" class="imagetext" title="Click to close" onclick="gifKaleidoCl()">
+				Kaleidoscope to GIF-Image
+				<button onclick="gifKaleidoCl()" id="closeimg1">X</button>
+			</p>
+			<img id="sampleimage" src="kaleidoscope-24.gif" class="imageAddView" alt="Create GIF Image">
+			<form class="formbox" id="sampleimgif">
+				<div class="inlineblock">Frames: <k id="GifLng">5</k><br><input type="range" id="inputGifLng" min="1" max="10" value="5" step="1"></div>
+				<div class="inlineblock">Delay: <k id="GifDelay">0.7 Sec.</k><br><input type="range" id="inputGifDelay" min="100" max="1500" value="700" step="100"></div>
+				<label id="gifForShare" for="gifShare" class="tooltip">
+					<div><b>Animate text: spread on frames</b></div><input type="checkbox" id="gifShare" onclick="gifShareSet()">Animate text
+				</label>
+				<button id="saveAs123Gif" onclick="buildAniGIF();return false">Create animated GIF</button><br>
+				<span id="allgifdone">---</span> <button id="saveAs1Gif" onclick="saveKalendoscopeImGif();return false">Save as GIF image</button> <span id="allgifsdone">---</span>
+				<button id="shareAsGif" onclick="shareAsGifs();return false"> </button>
+			</form>
+			<button id="gifImagesCl" onclick="gifKaleidoCl();return false">CLOSE</button>
+		</div>
+		<div id="KaleidosSp">
+			<div id="ownDesignsDiv"></div>
+			<div class="floatleft">
+				<div id="imagesUldiv">
+					<div class="inlineblock tooltip">
+						<div><b>Insert new image or select existing for kaleidoscope</b></div>
+						<button id="fotoInBtn" class="inpbto" onclick="closeAPosDiv();$('allImages').style.display='block';return false">New 🖼️</button>
+					</div>
+					<div class="inlineblock">
+						<div class="inlineblock tooltip">
+							<div><b>Undo and Redo<br>Quick change and clear History</b></div>
+							<button id="undoredo" onclick="undoredoHist();return false" disabled>⏴00(00)⏵</button>
+						</div><br>
+						<div class="inlineblock tooltip">
+							<div><b>Undo</b></div>
+							<button id="undoText" disabled> </button>
+						</div>&nbsp;&nbsp;
+						<div class="inlineblock tooltip">
+							<div><b>Redo</b></div>
+							<button id="redoText" disabled> </button>
+						</div>
+					</div>
+					<div id="undoredoDiv"><b>
+							<button id="undoredoCl" onclick="closeAPosDiv();return false"> X </button>
+							<em id="slider9b" onclick="closeAPosDiv();">Undo and Redo History: ---</em><br>
+							<button id="resetAllHist" onclick="resetAllHist();return false;">Clear History</button>
+							<input type="range" name="slider9" id="slider9" value="0" min="0" max="0" step="1"></b></div>
+					<div id="allImages">
+						<p id="imagetexts" class="imagetext" title="Click to close" onclick="closeAPosDiv();">Images for Kaleidoscope
+							<button onclick="closeAPosDiv();return false;" id="closeimg">X</button>
+						</p>
+						<ul id="imagesUl"></ul>
+						<p id="addImageUrl">New image from URL: <input type="text" id="addImageUrlIn" placeholder="https://www........"><button onclick="startDownload();return false;">Add Image</button></p>
+						<p id="addImageHdd">or click here to select an image from your device: <button onclick="fotoInHdd();return false;">Add Image</button></p>
+						<p>or drag and drop a file from desktop / explorer / other website</p>
+						<p>or press Ctrl+V (Paste) to use an image from your clipboard: <button id="fromClipboard" onclick="pasteImage();return false;">Add Image</button></p>
+						<button class="inlineblock tooltip" onclick="return false;" id="imagesInfo">
+							<div><b>These images are deleted after clearing history, deleting designs and reloading this page<em id="imagesInfo2"></em></b></div>info
+						</button>
+						<ul id="imagesNew"></ul>
+						<button onclick="closeAPosDiv();return false;" id="closeimg2">CLOSE</button>
+					</div>
+				</div>
+				<div id="startupHelp2">Drag mouse over Pattern Position to get started.</div>
+				<div id="svgdiv" ondblclick="myResetFunction()">
+					<svg width="100%" height="100%" id="imageSVG">
+						<defs>
+							<path id="arcPath" class="geom" d="M72,0A72,72 0 0,1 69.54665949281292,18.63497124738149L0,0Z"></path>
+							<clippath id="theClipPath" transform="rotate(0 90 80.68251437630926) translate(54,80.68251437630926)">
+								<path id="theClipPathPath" class="geom" d="M72,0A72,72 0 0,1 69.54665949281292,18.63497124738149L0,0Z"></path>
+							</clippath>
+						</defs>
+						<g opacity="0.25">
+							<image id="theImage" x="0" y="0" width="100%" height="100%" xlink:href="data/aaa.jpg"></image>
+						</g>
+						<g id="refGroup" transform="rotate(0 90 80.68251437630926) translate(54,80.68251437630926)">
+							<use xlink:href="#arcPath" class="geom"></use>
+						</g>
+						<use xlink:href="#theImage" id="svgUseShape" opacity="1" clip-path="url(#theClipPath)"></use>
+					</svg>
+				</div>
+			</div><span id="addDesignVi"></span>
+			<fieldset id="fieldsetone">
+				<legend> Forms and Designs <k>X</k>
+				</legend>
+				<div class="tooltip">
+					<div><b>Click to set the kaleidoscope shape to a rectangle, circle or selection of 9 others (hexagons, kisrhombilles, stars...)</b></div>
+					<button id="formKalei1" class="fotoformbto" onclick="formKalei(1,0);return false"></button>
+					<button id="formKalei2" class="fotoformbto" onclick="formKalei(2,0);return false"></button>
+					<button id="formKalei3" class="fotoformbto" onclick="formKalei(3,7);return false"></button>
+					<button id="formKalei4" class="fotoformbto" onclick="formKalei(4,8);return false"></button>
+					<button id="formKalei5" class="fotoformbto" onclick="formKalei(5,1);return false"></button>
+					<button id="formKalei6" class="fotoformbto" onclick="formKalei(6,2);return false"></button>
+					<button id="formKalei7" class="fotoformbto" onclick="formKalei(7,3);return false"></button>
+					<button id="formKalei8" class="fotoformbto" onclick="formKalei(8,4);return false"></button>
+					<button id="formKalei9" class="fotoformbto" onclick="formKalei(9,5);return false"></button>
+					<button id="formKalei10" class="fotoformbto" onclick="formKalei(10,6);return false"></button>
+					<button id="formKalei11" class="fotoformbto" onclick="formKalei(11,0);return false"></button>
+					<button id="formKalei12" class="fotoformbto" onclick="formKalei(12,0);return false"></button>
+				</div>
+				<div class="inlineblock tooltip">
+					<div><b>Click "Add Design" to save all options as template</b></div>
+					<button id="addDesignbt" onclick="addDesign();return false">Add Design</button>
+				</div>
+				<div class="inlineblock tooltip">
+					<div><b>Click "Own Designs" to view and load saved template</b></div>
+					<button id="ownDesignsbt" onclick="allDesigns(0);return false" disabled>Own Designs</button>
+				</div>
+			</fieldset>
+			<fieldset id="fieldsettwo">
+				<legend> Pattern Options <k>X</k>
+				</legend>
 
-</fieldset>
-</form>
-		<form id="backgrimg">
-		<fieldset><legend> Image Transparency and Background Color <k>X</k></legend>
-		<div class="tooltip"><div><b id="bTransparency">How strong transparency (more than 0 activated). Select transparent color from canvas or Color Picker by click!</b></div>
-		Image-Transparency:<label><input type="range" onchange="saveAppToDb(2,this.value*1,11)" name="transpset" id="transpset" value="0" min="0" max="1" step="0.01"></label>
-		<label class="inlineblock" for="setRemColor"><input id="setRemColor" oninput="valueTransp()" onchange="saveAppToDb(3,hexToRgb($('setRemColor').value),12)" type="color">
-		<button id="imageTrEye" onclick="imageTrEyed();return false;"> </button>
-		</label>
+				<button id="resetAllFilterEx" onclick="myResetFunction();saveAppToDb(1,1,19);return false;" disabled="true"><label class="tooltip">
+						<div><b>Reset tiling position and options</b></div>R<br>e<br>s<br>e<br>t
+					</label></button>
+				<label class="tooltip">
+					<div><b id="slider0b">Rotate: 0-360° (0°)</b></div><input type="range" onchange="saveAppToDb(1,this.value*1,2)" name="slider0" id="slider0" value="0" min="0" max="360" step="5">
+					<k id="label1"></k>
+				</label>
+				<label class="tooltip">
+					<div><b id="slider1b">ZOOM Tiele (40)</b></div><input type="range" onchange="saveAppToDb(2,this.value*1,3)" name="slider1" id="slider1" value="0.4" min="0.2" max="1" step="0.01">
+					<k id="label2"></k>
+				</label>
+				<label id="slider22" class="tooltip">
+					<div><b id="slider2b">3-32 SECTORs (12)</b></div><input type="range" onchange="saveAppToDb(3,this.value*1,4)" name="slider2" id="slider2" value="12" min="3" max="32" step="1">
+					<k id="label3"></k>
+				</label><br>
+
+			</fieldset>
+			<form id="filtercss">
+				<fieldset>
+					<legend> Select Image Filters <k>X</k>
+					</legend>
+					<button id="resetAllFilter" onclick="resetAllCSS();saveAppToDb(2,1,20);return false;" disabled="true">Reset</button>
+					<label class="tooltip">
+						<div><b>Brightness</b></div><input type="range" onchange="saveAppToDb(1,this.value*1,5)" name="brightness" value="1" min="0" max="2" step="0.1">
+						<k id="label4"></k>
+					</label>
+					<label class="tooltip">
+						<div><b>Contrast</b></div><input type="range" onchange="saveAppToDb(2,this.value*1,6)" name="contrast" value="1" min="0" max="2" step="0.1">
+						<k id="label5"></k>
+					</label>
+					<label class="tooltip">
+						<div><b>Color saturation</b></div><input type="range" onchange="saveAppToDb(3,this.value*1,7)" name="saturate" value="1" min="0" max="2" step="0.1">
+						<k id="label6"></k>
+					</label>
+					<label class="tooltip">
+						<div><b>Shift hue of a color</b></div><input type="range" onchange="saveAppToDb(4,this.value*1,8)" name="hueRotate" value="0" min="-1" max="1" step="0.1">
+						<k id="label7"></k>
+					</label>
+					<label class="tooltip">
+						<div><b>Invert color</b></div><input type="range" onchange="saveAppToDb(5,this.value*1,9)" name="invert" id="invertcolor" value="0" min="0" max="1" step="1">
+						<k id="label8"></k>
+					</label>
+
+				</fieldset>
+			</form>
+			<form id="backgrimg">
+				<fieldset>
+					<legend> Image Transparency and Background Color <k>X</k>
+					</legend>
+					<div class="tooltip">
+						<div><b id="bTransparency">How strong transparency (more than 0 activated). Select transparent color from canvas or Color Picker by click!</b></div>
+						Image-Transparency:<label><input type="range" onchange="saveAppToDb(2,this.value*1,11)" name="transpset" id="transpset" value="0" min="0" max="1" step="0.01"></label>
+						<label class="inlineblock" for="setRemColor"><input id="setRemColor" oninput="valueTransp()" onchange="saveAppToDb(3,hexToRgb($('setRemColor').value),12)" type="color">
+							<button id="imageTrEye" onclick="imageTrEyed();return false;"> </button>
+						</label>
+					</div>
+					<div class="inlineblock hrtopda"><label for="setHcolor">Background-Color:<input id="setHcolor" type="color"><span id="selectedcolor">TRANSP.</span><button id="imageBgEye" onclick="imageBgEyed();return false;"> </button></label>
+						<button id="ResetHcolor" onclick="resetHcolor();saveAppToDb(4,1,22);return false;" disabled="true">Reset to TRANSPARENT</button>
+					</div>
+					<div class="inlineblock">
+						<label class="tooltip">Vignette:<div><b id="bVignette">Set vignette <label>
+										<k id="label10"></k>
+									</label></b></div><input type="range" onchange="saveAppToDb(2,this.value*1,14)" name="vignetteset" value="0" min="0" max="1" step="0.1"></label>
+					</div>
+				</fieldset>
+			</form>
+			<form>
+				<fieldset>
+					<legend> Your own Text <k>X</k>
+					</legend>
+					<label class="tooltip">
+						<div><b>Enter one or more lines of text. Double click deletes text.</b></div>
+						<textarea id="textGif" placeholder="Text..." onkeyup="gifShareSet()" onpaste="gifShareSet()" oninput="gifShareSet()" ondblclick="gifTextDel()"></textarea>
+					</label>
+					<div class="inlineblock">
+						<label class="tooltip">
+							<div><b>Fill-Color for text</b></div><input id="gifTxColor" type="color" value="#0000ff" onchange="gifShareSet1()" oninput="textCanvasGp()"><button id="imageTxiEye" onclick="imageTxiEyed();return false;"> </button>
+						</label><br>
+						<label class="tooltip">
+							<div><b>Border-Color for text</b></div><input id="gifTxColor2" type="color" value="#ffff00" onchange="gifShareSet2()" oninput="textCanvasGp()"><button id="imageTxaEye" onclick="imageTxaEyed();return false;"> </button>
+						</label>
+					</div>
+					<div class="inlineblock tooltip">
+						<div><b id="fonstload">Fonts, Size, Style and Position</b></div>
+						<select id="gifFonts" onchange="gifFontsSet()">
+							<option value="arial" style="font-family:Arial;background:#0dccea">Font</option>
+							<option value="Arial" style="font-family:Arial" selected>Arial</option>
+							<option value="Helvetica" style="font-family:Helvetica">Helvetica</option>
+							<option value="Georgia" style="font-family:Georgia">Georgia</option>
+							<option value="Times" style="font-family:Times">Times</option>
+							<option value="arial " style="font-family:Arial">more fonts</option>
+						</select>
+						<select id="gifTxSize" onchange="gifTxSizeSet()">
+							<option value="15" style="background:#0dccea">Size</option>
+							<option value="16">16</option>
+							<option value="24">24</option>
+							<option value="32">32</option>
+							<option value="40">40</option>
+							<option value="48" selected>48</option>
+							<option value="56">56</option>
+							<option value="64">64</option>
+							<option value="72">72</option>
+							<option value="80">80</option>
+							<option value="88">88</option>
+							<option value="98">98</option>
+						</select><br>
+						<select id="gifTxBoKs" onchange="gifTxBoKsSet()">
+							<option value=" " style="background:#0dccea">Style</option>
+							<option value="" selected>normal</option>
+							<option value="bold ">bold</option>
+							<option value="italic ">italic</option>
+							<option value="italic bold ">italic bold</option>
+						</select>
+						<select id="gifTxPos" onchange="gifTxPosSet()">
+							<option value="middle " style="background:#0dccea">Align</option>
+							<option value="top">top</option>
+							<option value="middle" selected>middle</option>
+							<option value="bottom">bottom</option>
+						</select>
+					</div>
+				</fieldset>
+			</form>
+			<div id="infokaleid"></div>
+			<fieldset id="easysiz">
+				<legend> Canvas Size <k>X</k>
+				</legend>
+				<label><input type="range" onchange="saveAppToDb(this.value,this.value*1,15)" name="slider4" id="slider4" value="700" min="50" max="1500" step="50">
+					<k id="label9"></k>
+				</label>
+				<div id="imagesizeinfo" class="inlineblock tooltip" onmouseover="void(0)">
+					<div><b>Manually set width and height for canvas from 50 to 1500 pixels</b></div>Canvas:
+					<label id="wcansize"><input type="text" id="wcansitze" value="700"></label>x<label id="hcansize"><input type="text" id="hcansitze" value="700"></label>
+					px <button onclick="setCanSitze();return false;">Set</button>
+				</div>
+			</fieldset>
+			<fieldset id="easytxt">
+				<legend> Kaleidoscope as Image <k>X</k>
+				</legend>
+				<div class="inlineblock tooltip" onmouseover="void(0)">SAVE<br>as PNG<div><b>Click to save the image with transparency as a PNG file, but be aware that it may result in a large file size!</b></div>
+					<br>
+					<button class="glow-on-hover" onclick="saveKalendoscopeImage();return false"><b>📥</b><b>💾</b><b>📥</b></button>
+				</div>
+				<div class="inlineblock tooltip" onmouseover="void(0)">SAVE<br>as JPG<div><b>Click to save the image without transparency as a JPG file</b></div>
+					<br>
+					<button class="glow-on-hover" onclick="saveKalendoscopeImJpg();return false"><b>📥</b><b>💾</b><b>📥</b></button>
+				</div>
+				<div class="inlineblock tooltip" id="webpbutton" onmouseover="void(0)">SAVE<br>as WEBP<div><b>Click to save the image with transparency as a WEBP file, which will result in a smaller file size but may have limited usage</b></div>
+					<br>
+					<button class="glow-on-hover" onclick="saveKalendoscopeImWebp();return false"><b>📥</b><b>💾</b><b>📥</b></button>
+				</div>
+				<div class="inlineblock tooltip" id="gifbutton" onmouseover="void(0)">SAVE<br>as GIF<div><b>Click to create and save the image with transparency and your text as a normal or animated GIF file</b></div>
+					<br>
+					<button class="glow-on-hover" onclick="newGifKaleido();return false"><b>📥</b><b>💾</b><b>📥</b></button>
+				</div>
+				<div id="clipboardDiv" class="inlineblock tooltip" onmouseover="void(0)">COPY to<br>clipboard<div><b>Copy an image with transparency to the clipboard</b></div>
+					<br>
+					<button class="glow-on-hover" onclick="fotoClipboardWrite();return false"><b>👉</b><b>📋</b><b>👈</b></button>
+				</div>
+			</fieldset>
+			<button id="shareAsPng" onclick="shareAsPngs();"> </button>
+			<label class="labelclass" for="chCssHelptoool"><input type="checkbox" id="chCssHelptoool" onclick="setCssHelptoool()"> Disable all tooltips</label>
 		</div>
-		<div class="inlineblock hrtopda"><label for="setHcolor">Background-Color:<input id="setHcolor" type="color"><span id="selectedcolor">TRANSP.</span><button id="imageBgEye" onclick="imageBgEyed();return false;"> </button></label> 
-		<button id="ResetHcolor" onclick="resetHcolor();saveAppToDb(4,1,22);return false;" disabled="true">Reset to TRANSPARENT</button>
-		</div>
-		<div class="inlineblock">
-		<label class="tooltip">Vignette:<div><b id="bVignette">Set vignette <label><k id="label10"></k></label></b></div><input type="range" onchange="saveAppToDb(2,this.value*1,14)" name="vignetteset" value="0" min="0" max="1" step="0.1"></label>
-		</div>	
-		</fieldset>
-		</form>
-<form>
-<fieldset><legend> Your own Text <k>X</k></legend>
-<label class="tooltip"><div><b>Enter one or more lines of text. Double click deletes text.</b></div>
-<textarea id="textGif" placeholder="Text..." onkeyup="gifShareSet()" onpaste="gifShareSet()" oninput="gifShareSet()" ondblclick="gifTextDel()"></textarea></label>
-<div class="inlineblock">
-<label class="tooltip"><div><b>Fill-Color for text</b></div><input id="gifTxColor" type="color" value="#0000ff" onchange="gifShareSet1()" oninput="textCanvasGp()"><button id="imageTxiEye" onclick="imageTxiEyed();return false;"> </button></label><br>
-<label class="tooltip"><div><b>Border-Color for text</b></div><input id="gifTxColor2" type="color" value="#ffff00" onchange="gifShareSet2()" oninput="textCanvasGp()"><button id="imageTxaEye" onclick="imageTxaEyed();return false;"> </button></label>
-</div>
-<div class="inlineblock tooltip"><div><b id="fonstload">Fonts, Size, Style and Position</b></div>
-<select id="gifFonts" onchange="gifFontsSet()">
-<option value="arial" style="font-family:Arial;background:#0dccea">Font</option>
-<option value="Arial" style="font-family:Arial" selected>Arial</option>
-<option value="Helvetica" style="font-family:Helvetica">Helvetica</option>
-<option value="Georgia" style="font-family:Georgia">Georgia</option>
-<option value="Times" style="font-family:Times">Times</option>
-<option value="arial " style="font-family:Arial">more fonts</option>
-</select>
-<select id="gifTxSize" onchange="gifTxSizeSet()">
-<option value="15" style="background:#0dccea">Size</option>
-<option value="16">16</option>
-<option value="24">24</option>
-<option value="32">32</option>
-<option value="40">40</option>
-<option value="48" selected>48</option>
-<option value="56">56</option>
-<option value="64">64</option>
-<option value="72">72</option>
-<option value="80">80</option>
-<option value="88">88</option>
-<option value="98">98</option>
-</select><br>
-<select id="gifTxBoKs" onchange="gifTxBoKsSet()">
-<option value=" " style="background:#0dccea">Style</option>
-<option value="" selected>normal</option>
-<option value="bold ">bold</option>
-<option value="italic ">italic</option>
-<option value="italic bold ">italic bold</option>
-</select>
-<select id="gifTxPos" onchange="gifTxPosSet()">
-<option value="middle " style="background:#0dccea">Align</option>
-<option value="top">top</option>
-<option value="middle" selected>middle</option>
-<option value="bottom">bottom</option>
-</select>
-</div>
-</fieldset>
-</form>
-		<div id="infokaleid"></div>
-	<fieldset id="easysiz"><legend> Canvas Size <k>X</k></legend>
-	<label><input type="range" onchange="saveAppToDb(this.value,this.value*1,15)" name="slider4" id="slider4" value="700" min="50" max="1500" step="50"><k id="label9"></k></label> 
-	<div id="imagesizeinfo" class="inlineblock tooltip" onmouseover="void(0)"><div><b>Manually set width and height for canvas from 50 to 1500 pixels</b></div>Canvas: 
-	<label id="wcansize"><input type="text" id="wcansitze" value="700"></label>x<label id="hcansize"><input type="text" id="hcansitze" value="700"></label>
-	 px <button onclick="setCanSitze();return false;">Set</button></div>
-	</fieldset>
-	<fieldset id="easytxt"><legend> Kaleidoscope as Image <k>X</k></legend>
-	<div class="inlineblock tooltip" onmouseover="void(0)">SAVE<br>as PNG<div><b>Click to save the image with transparency as a PNG file, but be aware that it may result in a large file size!</b></div>
-	<br>
-	<button class="glow-on-hover" onclick="saveKalendoscopeImage();return false"><b>📥</b><b>💾</b><b>📥</b></button>
-	</div> 
-	<div class="inlineblock tooltip" onmouseover="void(0)">SAVE<br>as JPG<div><b>Click to save the image without transparency as a JPG file</b></div>
-	<br>
-	<button class="glow-on-hover" onclick="saveKalendoscopeImJpg();return false"><b>📥</b><b>💾</b><b>📥</b></button>
-	</div> 
-	<div class="inlineblock tooltip" id="webpbutton" onmouseover="void(0)">SAVE<br>as WEBP<div><b>Click to save the image with transparency as a WEBP file, which will result in a smaller file size but may have limited usage</b></div>
-	<br>
-	<button class="glow-on-hover" onclick="saveKalendoscopeImWebp();return false"><b>📥</b><b>💾</b><b>📥</b></button>
-	</div> 
-	<div class="inlineblock tooltip" id="gifbutton" onmouseover="void(0)">SAVE<br>as GIF<div><b>Click to create and save the image with transparency and your text as a normal or animated GIF file</b></div>
-	<br>
-	<button class="glow-on-hover" onclick="newGifKaleido();return false"><b>📥</b><b>💾</b><b>📥</b></button>
-	</div> 
-	<div id="clipboardDiv" class="inlineblock tooltip" onmouseover="void(0)">COPY to<br>clipboard<div><b>Copy an image with transparency to the clipboard</b></div>
-	<br>
-	<button class="glow-on-hover" onclick="fotoClipboardWrite();return false"><b>👉</b><b>📋</b><b>👈</b></button>
+		<div id="startupHelp">Select transparent color from image by click.</div>
 	</div>
-	</fieldset>
-	<button id="shareAsPng" onclick="shareAsPngs();"> </button>
-	<label class="labelclass" for="chCssHelptoool"><input type="checkbox" id="chCssHelptoool" onclick="setCssHelptoool()"> Disable all tooltips</label>
-	</div>
-	<div id="startupHelp">Select transparent color from image by click.</div>
-	</div>
-	
+
 	<div id="textinhalt">
-	<h1>How to Create Beautiful Kaleidoscopes from Photos Using Our Online Tool</h1>
-	<!--<img src="kaleidoscope-examples.jpg" alt="From just one image, different kaleidoscopes can be created" width="600" height="600" id="kaleidoscopic">-->
-	<picture id="kaleidoscopic">
-		<source type="image/webp" srcset="kaleidoscope-examples.webp">
-		<source type="image/jpeg" srcset="kaleidoscope-examples.jpg">
-		<img src="kaleidoscope-examples.jpg" alt="From just one image, different kaleidoscopes can be created" width="600"
-			height="600">
-	</picture>
-	<!--<div class="shapeegg"></div>-->
-	<p><strong><em>Kaleidoscope image generator - create beautiful kaleidoscopes from photos and images.</em></strong></p>
-<p><strong>Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities. Choose from a variety of shapes, colors, and sizes to craft captivating symmetrical mandalas or simulate the enchanting effects of rotating mirrors with classic kaleidoscopes. No installation or registration required - simply create, save, and share your unique kaleidoscope creations with ease. Dive into the kaleidoscope art and watch as mundane images transform into stunning masterpieces.</strong></p>
-<p><button class="glow-on-hover" id="startKaleidoBT">Start Create Kaleidoscope</button></p>
-<p><em>From just one image, different kaleidoscopes can be created, like these 12 examples. A kaleidoscope is a device that produces symmetrical patterns from the reflection of light by mirrors or other objects. As you can see, there are endless possibilities to create stunning kaleidoscopes from any image.</em></p>
-<p>Kaleidoscopes are fascinating optical devices that consist of mirrors and colorful objects, forming new patterns with each turn. You can also create digital kaleidoscopes using our online tool, which offers two different types: symmetrical mandalas and classic kaleidoscopes.
-</p><p>
-Symmetrical mandalas are geometric figures composed of repeating elements arranged around a central point. They can be used as spiritual symbols or works of art. Our online tool allows you to create symmetrical mandalas by choosing from various shapes, colors, and sizes, and customizing them according to your preferences. You can also upload your own images and use them as a basis for your mandalas.
-</p><p>
-Classic kaleidoscopes are those you may remember from your childhood. They consist of a tube with multiple mirrors inside, creating a constantly changing pattern as you rotate the tube. Our online tool simulates this effect by dividing your image into multiple segments and reflecting them. You can adjust the number of segments, rotation angle, and zoom factor to achieve different kaleidoscope effects.
-</p><p>
-Our online tool is easy to use and requires no installation or registration. You can save your kaleidoscopes as images at any time, then share or print them. Give it a try and explore the beauty of kaleidoscope art!</p>
-<p>Secure: Worried about privacy? Images never leave your device since Kaleidoscope24.com does all the work locally.</p>	
+		<h1>How to Create Beautiful Kaleidoscopes from Photos Using Our Online Tool</h1>
+		<!--<img src="kaleidoscope-examples.jpg" alt="From just one image, different kaleidoscopes can be created" width="600" height="600" id="kaleidoscopic">-->
+		<picture id="kaleidoscopic">
+			<source type="image/webp" srcset="kaleidoscope-examples.webp">
+			<source type="image/jpeg" srcset="kaleidoscope-examples.jpg">
+			<img src="kaleidoscope-examples.jpg" alt="From just one image, different kaleidoscopes can be created" width="600" height="600">
+		</picture>
+		<!--<div class="shapeegg"></div>-->
+		<p><strong><em>Kaleidoscope image generator - create beautiful kaleidoscopes from photos and images.</em></strong></p>
+		<p><strong>Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood, our tool offers endless possibilities. Choose from a variety of shapes, colors, and sizes to craft captivating symmetrical mandalas or simulate the enchanting effects of rotating mirrors with classic kaleidoscopes. No installation or registration required - simply create, save, and share your unique kaleidoscope creations with ease. Dive into the kaleidoscope art and watch as mundane images transform into stunning masterpieces.</strong></p>
+		<p><button class="glow-on-hover" id="startKaleidoBT">Start Create Kaleidoscope</button></p>
+		<p><em>From just one image, different kaleidoscopes can be created, like these 12 examples. A kaleidoscope is a device that produces symmetrical patterns from the reflection of light by mirrors or other objects. As you can see, there are endless possibilities to create stunning kaleidoscopes from any image.</em></p>
+		<p>Kaleidoscopes are fascinating optical devices that consist of mirrors and colorful objects, forming new patterns with each turn. You can also create digital kaleidoscopes using our online tool, which offers two different types: symmetrical mandalas and classic kaleidoscopes.
+		</p>
+		<p>
+			Symmetrical mandalas are geometric figures composed of repeating elements arranged around a central point. They can be used as spiritual symbols or works of art. Our online tool allows you to create symmetrical mandalas by choosing from various shapes, colors, and sizes, and customizing them according to your preferences. You can also upload your own images and use them as a basis for your mandalas.
+		</p>
+		<p>
+			Classic kaleidoscopes are those you may remember from your childhood. They consist of a tube with multiple mirrors inside, creating a constantly changing pattern as you rotate the tube. Our online tool simulates this effect by dividing your image into multiple segments and reflecting them. You can adjust the number of segments, rotation angle, and zoom factor to achieve different kaleidoscope effects.
+		</p>
+		<p>
+			Our online tool is easy to use and requires no installation or registration. You can save your kaleidoscopes as images at any time, then share or print them. Give it a try and explore the beauty of kaleidoscope art!</p>
+		<p>Secure: Worried about privacy? Images never leave your device since Kaleidoscope24.com does all the work locally.</p>
 	</div>
-<footer>
-	Copyright © 2023 Kaleidoscope24.com. All rights reserved.
-	<div id="menufoter">
-		<a href="javascript:startKaleidoJS()" id="CreateKalei2">Create Kaleidoscope</a> <a href="faq.html">FAQ</a> <a href="features.html">Features</a> 
-		<a href="examples.html">Examples</a> <a href="pwa.html">PWA</a> <a href="about.html">About</a> <a href="privacy.html">Privacy</a> <a href="cookies.html">Cookies</a> <a href="contact.html">Contact</a> <a href="license.html">License</a>
-	</div>
-</footer>
-<form id="filform"><label><input id="fileField1" type="file" multiple="multiple" accept="image/*" title="File">
-	<!--<input type="file" accept="image/*;capture=camera">-->
-	</label></form>	
-<svg class="classfilter">
-<filter id="image-filter">
-<feFlood id="vignette-flood" x="0" y="0" result="blackfield" flood-color="#000000" flood-opacity="1"></feFlood>
-<feSpecularLighting id="vignette-specular" result="spotlight" lighting-color="#FFFFFF" surfaceScale="1" specularConstant="1" specularExponent="120">
-<fePointLight id="vignette-pointlight" x="350" y="350" z="1000"></fePointLight>
-</feSpecularLighting>
-<feBlend id="vignette-mask" result="mask" in="blackfield" in2="spotlight" mode="lighten"></feBlend>
-<feBlend id="vignette-mask-multiply" in="mask" in2="SourceGraphic" mode="multiply" result="vignette-result"></feBlend>
-</filter>
-</svg>
+	<footer>
+		Copyright © 2023 Kaleidoscope24.com. All rights reserved.
+		<div id="menufoter">
+			<a href="javascript:startKaleidoJS()" id="CreateKalei2">Create Kaleidoscope</a>
+		</div>
+	</footer>
+	<form id="filform"><label><input id="fileField1" type="file" multiple="multiple" accept="image/*" title="File">
+			<!--<input type="file" accept="image/*;capture=camera">-->
+		</label></form>
+	<svg class="classfilter">
+		<filter id="image-filter">
+			<feFlood id="vignette-flood" x="0" y="0" result="blackfield" flood-color="#000000" flood-opacity="1"></feFlood>
+			<feSpecularLighting id="vignette-specular" result="spotlight" lighting-color="#FFFFFF" surfaceScale="1" specularConstant="1" specularExponent="120">
+				<fePointLight id="vignette-pointlight" x="350" y="350" z="1000"></fePointLight>
+			</feSpecularLighting>
+			<feBlend id="vignette-mask" result="mask" in="blackfield" in2="spotlight" mode="lighten"></feBlend>
+			<feBlend id="vignette-mask-multiply" in="mask" in2="SourceGraphic" mode="multiply" result="vignette-result"></feBlend>
+		</filter>
+	</svg>
 
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('sw.js',{scope:'/'});
-}
-let deferredPrompt;
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js', { scope: '/' });
+		}
+		let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt',e=>{
-  e.preventDefault();deferredPrompt=e;
-  if(localStorage.getItem('installbut')&&localStorage.getItem('installbut')=='set'){
-  document.getElementById('install_but').style.display='none'}else{
-  document.getElementById('install_but').style.display='inline-block';
-  document.getElementById('install_but').addEventListener('click',installApp)}
-});
+		window.addEventListener('beforeinstallprompt', e => {
+			e.preventDefault(); deferredPrompt = e;
+			if (localStorage.getItem('installbut') && localStorage.getItem('installbut') == 'set') {
+				document.getElementById('install_but').style.display = 'none'
+			} else {
+				document.getElementById('install_but').style.display = 'inline-block';
+				document.getElementById('install_but').addEventListener('click', installApp)
+			}
+		});
 
-function installApp(){
-  deferredPrompt.prompt();
-  document.getElementById('install_but').disabled=true;
-  deferredPrompt.userChoice.then(choiceResult=>{
-    if(choiceResult.outcome==='accepted'){
-	document.getElementById('install_but').hidden=true;
-	if(navigator.storage&&navigator.storage.persist){
-	var isPersisted=navigator.storage.persist()}
-    }
-    document.getElementById('install_but').disabled=false;
-    deferredPrompt=null;
-  });
-}
+		function installApp() {
+			deferredPrompt.prompt();
+			document.getElementById('install_but').disabled = true;
+			deferredPrompt.userChoice.then(choiceResult => {
+				if (choiceResult.outcome === 'accepted') {
+					document.getElementById('install_but').hidden = true;
+					if (navigator.storage && navigator.storage.persist) {
+						var isPersisted = navigator.storage.persist()
+					}
+				}
+				document.getElementById('install_but').disabled = false;
+				deferredPrompt = null;
+			});
+		}
 
-window.addEventListener('appinstalled',e=>{document.getElementById('install_but').style.display='none';
-localStorage.setItem('installbut','set')});
-if(window.matchMedia('(display-mode: standalone)').matches){document.getElementById('install_but').style.display='none';
-localStorage.setItem('installbut','set')}
+		window.addEventListener('appinstalled', e => {
+			document.getElementById('install_but').style.display = 'none';
+			localStorage.setItem('installbut', 'set')
+		});
+		if (window.matchMedia('(display-mode: standalone)').matches) {
+			document.getElementById('install_but').style.display = 'none';
+			localStorage.setItem('installbut', 'set')
+		}
 
-function filesFromEx(){
-if('launchQueue' in window){
-  launchQueue.setConsumer((launchParams) => {
-	  try{ if(launchParams.files.length <= 0){return}
-	  else{document.getElementById('startupHelp').innerHTML+='<p>'+launchParams.files.length+' Images from the file explorer loaded!</p>';
-var mx=(document.getElementById('kaleidoCanvas').clientWidth-20)+'px',mh='200px';
-document.getElementById('startupHelp').setAttribute('style','max-width:'+mx+';max-height:'+mh+';');}
-	  launchParams.files.forEach(async (handle) => {
-      const file = await handle.getFile();
-      readFile(file,0);
-    });}catch{}
-  });
-}}
+		function filesFromEx() {
+			if ('launchQueue' in window) {
+				launchQueue.setConsumer((launchParams) => {
+					try {
+						if (launchParams.files.length <= 0) { return }
+						else {
+							document.getElementById('startupHelp').innerHTML += '<p>' + launchParams.files.length + ' Images from the file explorer loaded!</p>';
+							var mx = (document.getElementById('kaleidoCanvas').clientWidth - 20) + 'px', mh = '200px';
+							document.getElementById('startupHelp').setAttribute('style', 'max-width:' + mx + ';max-height:' + mh + ';');
+						}
+						launchParams.files.forEach(async (handle) => {
+							const file = await handle.getFile();
+							readFile(file, 0);
+						});
+					} catch { }
+				});
+			}
+		}
 
-var loadJStoby=function(url,func){
-    var sc=document.createElement('script');
-    sc.src=url;sc.onload=func;sc.onreadystatechange=func;
-    document.head.appendChild(sc);
-};
-var codeToCall=function(){loadJStoby('gif.worker1.js',codeToCall2)};
-var codeToCall2=function(){loadJStoby('kaleidoscope.js',codeToCall3)};
-var codeToCall3=function(){document.getElementById('canvasFrame').style.display='block';
-document.getElementById('startKaleidoBT').style.display='none';
-document.getElementById('CreateKalei').style.display='none';
-document.getElementById('CreateKalei2').style.display='none';
-document.getElementById('kaleidoscopic').onclick='';
-localStorage.setItem('startkaleidojs','set');
-filesFromEx();
-const restoreImageFromShare = async () => {
-  const cache = await caches.open('media');
-  if(cache){const requests = await cache.keys();
-  requests.reverse().forEach(async (request) => {
-    const response = await cache.match(request);
-    const rblob = await response.blob();
-	const rname = await response.headers.get('name');
-    await readFile(rblob,rname);
-	await cache.delete(response);
-  });
-	caches.delete('media');
-	// Modify the URL without reloading the page
-	  // https://www.30secondsofcode.org/js/s/modify-url-without-reload/
-	  // Current URL: https://kaleidoscope24.com/?share
-	  const nextURL = 'https://kaleidoscope24.com/';
-	  const nextTitle = 'Kaleidoscope24.com';
-	  const nextState = { additionalInformation: 'URL without ?share' };
+		var loadJStoby = function (url, func) {
+			var sc = document.createElement('script');
+			sc.src = url; sc.onload = func; sc.onreadystatechange = func;
+			document.head.appendChild(sc);
+		};
+		var codeToCall = function () { loadJStoby('gif.worker1.js', codeToCall2) };
+		var codeToCall2 = function () { loadJStoby('kaleidoscope.js', codeToCall3) };
+		var codeToCall3 = function () {
+			document.getElementById('canvasFrame').style.display = 'block';
+			document.getElementById('startKaleidoBT').style.display = 'none';
+			document.getElementById('CreateKalei').style.display = 'none';
+			document.getElementById('CreateKalei2').style.display = 'none';
+			document.getElementById('kaleidoscopic').onclick = '';
+			localStorage.setItem('startkaleidojs', 'set');
+			filesFromEx();
+			const restoreImageFromShare = async () => {
+				const cache = await caches.open('media');
+				if (cache) {
+					const requests = await cache.keys();
+					requests.reverse().forEach(async (request) => {
+						const response = await cache.match(request);
+						const rblob = await response.blob();
+						const rname = await response.headers.get('name');
+						await readFile(rblob, rname);
+						await cache.delete(response);
+					});
+					caches.delete('media');
+					// Modify the URL without reloading the page
+					// https://www.30secondsofcode.org/js/s/modify-url-without-reload/
+					// Current URL: https://kaleidoscope24.com/?share
+					const nextURL = 'https://kaleidoscope24.com/';
+					const nextTitle = 'Kaleidoscope24.com';
+					const nextState = { additionalInformation: 'URL without ?share' };
 
-	  // This will create a new entry in the browser's history, without reloading
-	  window.history.pushState(nextState, nextTitle, nextURL);
+					// This will create a new entry in the browser's history, without reloading
+					window.history.pushState(nextState, nextTitle, nextURL);
 
-	  // This will replace the current entry in the browser's history, without reloading
-	  window.history.replaceState(nextState, nextTitle, nextURL);		 
-}
-};
-if(location.search.includes('share')){restoreImageFromShare()}
-};
+					// This will replace the current entry in the browser's history, without reloading
+					window.history.replaceState(nextState, nextTitle, nextURL);
+				}
+			};
+			if (location.search.includes('share')) { restoreImageFromShare() }
+		};
 
-function startKaleidoJS(){
-	if(typeof readFile!='function'){loadJStoby('forage.gif.hermite.min.js',codeToCall)}
-	else{codeToCall3();}
-}
-	
-document.getElementById('startKaleidoBT').addEventListener('click',startKaleidoJS);
-document.getElementById('kaleidoscopic').addEventListener('click',startKaleidoJS);
-if(localStorage.getItem('startkaleidojs')&&localStorage.getItem('startkaleidojs')=='set'){startKaleidoJS()}
+		function startKaleidoJS() {
+			if (typeof readFile != 'function') { loadJStoby('forage.gif.hermite.min.js', codeToCall) }
+			else { codeToCall3(); }
+		}
+
+		document.getElementById('startKaleidoBT').addEventListener('click', startKaleidoJS);
+		document.getElementById('kaleidoscopic').addEventListener('click', startKaleidoJS);
+		if (localStorage.getItem('startkaleidojs') && localStorage.getItem('startkaleidojs') == 'set') { startKaleidoJS() }
 
 
-function shareAsWebs(){
-  var shareData={title:'Kaleidoscope24.com',
-  text:'Create Kaleidoscopes from Photos',
-  url:'https://kaleidoscope24.com',
-};
+		function shareAsWebs() {
+			var shareData = {
+				title: 'Kaleidoscope24.com',
+				text: 'Create Kaleidoscopes from Photos',
+				url: 'https://kaleidoscope24.com',
+			};
 
-    if(navigator.canShare){
-     navigator.share(shareData);
-    }else{document.getElementById('shareAsWeb').style.display='none'}
-}
+			if (navigator.canShare) {
+				navigator.share(shareData);
+			} else { document.getElementById('shareAsWeb').style.display = 'none' }
+		}
 
-if(!navigator.canShare){document.getElementById('shareAsWeb').style.display='none'}
+		if (!navigator.canShare) { document.getElementById('shareAsWeb').style.display = 'none' }
 
-if('windowControlsOverlay' in navigator){
-	const { width } = navigator.windowControlsOverlay.getTitlebarAreaRect();
-	document.body.classList.toggle('geomchange', width < 250);
-	navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
-		const { width } = navigator.windowControlsOverlay.getTitlebarAreaRect();
-		document.body.classList.toggle('geomchange', width < 250);
-	});
-}else{document.body.className='geomchange'}
+		if ('windowControlsOverlay' in navigator) {
+			const { width } = navigator.windowControlsOverlay.getTitlebarAreaRect();
+			document.body.classList.toggle('geomchange', width < 250);
+			navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
+				const { width } = navigator.windowControlsOverlay.getTitlebarAreaRect();
+				document.body.classList.toggle('geomchange', width < 250);
+			});
+		} else { document.body.className = 'geomchange' }
 
-if(localStorage.getItem('newPost')&&localStorage.getItem('newPost')!=''){
-    const datas = localStorage.getItem('newPost').split('|||');
-	if(datas.length==3){
-	let data = new FormData();
-	data.append('name', datas[0]);
-	data.append('email', datas[1]);
-	data.append('message', datas[2]);
-    fetch('mainmail.php', { method: 'POST', body: data }).then(()=>{localStorage.setItem('newPost','');console.log('send')}).catch(()=>{console.log('not send')});}
-  }
-</script>
+		if (localStorage.getItem('newPost') && localStorage.getItem('newPost') != '') {
+			const datas = localStorage.getItem('newPost').split('|||');
+			if (datas.length == 3) {
+				let data = new FormData();
+				data.append('name', datas[0]);
+				data.append('email', datas[1]);
+				data.append('message', datas[2]);
+				fetch('mainmail.php', { method: 'POST', body: data }).then(() => { localStorage.setItem('newPost', ''); console.log('send') }).catch(() => { console.log('not send') });
+			}
+		}
+	</script>
 </body>
+
 </html>
 
