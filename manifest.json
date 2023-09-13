@@ -1,0 +1,141 @@
+{
+  "lang": "en-us",
+  "dir": "ltr",
+  "name": "Kaleidoscope24",
+  "short_name": "Kaleidoscope",
+  "description": "Discover the mesmerizing world of kaleidoscopes and unlock your artistic potential with our user-friendly online tool. Whether you're drawn to the symmetrical beauty of mandalas or nostalgic for the classic kaleidoscopes of your childhood.",
+  "categories": [
+    "photo",
+    "productivity",
+    "graphics",
+    "design"
+  ],
+  "id": "/",
+  "start_url": "/",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#050577",
+  "background_color": "#373737",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "screenshot1.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpg",
+      "form_factor": "narrow",
+      "label": "Different Forms, Designs, Text, Colors and more Options"
+    },
+    {
+      "src": "screenshot2.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpg",
+      "form_factor": "narrow",
+      "label": "Save as PNG, JPG, WEBP or animated GIF Images"
+    },
+    {
+      "src": "screenshot3.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpg",
+      "form_factor": "wide",
+      "label": "Create kaleidoscope on PC or Tablet"
+    },
+    {
+      "src": "screenshot4.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpg",
+      "form_factor": "wide",
+      "label": "Insert your own photos and write text"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "image/*": [
+          ".jpg",
+          ".jpeg",
+          ".png",
+          ".gif",
+          ".webp"
+        ]
+      },
+      "icons": [
+        {
+          "src": "maus-kl64.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        }
+      ],
+      "launch_handler": {
+        "client_mode": "navigate-existing"
+      }
+    }
+  ],
+  "launch_handler": {
+    "route_to": "existing-client",
+    "client_mode": "navigate-existing"
+  },
+  "share_target": {
+    "action": "/receive-shares",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "image/*"
+          ]
+        }
+      ]
+    }
+  },
+  "url_handlers": [
+    {
+      "origin": "https://kaleidoscope24.com"
+    }
+  ],
+  "display": "fullscreen",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "shortcuts": [
+    {
+      "name": "Message us",
+      "short_name": "Message",
+      "url": "contact.html",
+      "icons": [
+        {
+          "src": "contact.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+    "edge_side_panel": {
+      "preferred_width": 400
+    },
+  "handle_links": "preferred"
+}
