@@ -18,7 +18,7 @@ Kaleidoscope24 is a progressive web app (PWA) that offers a rich and immersive e
 ## Create Kaleidoscope and Mandalas
 <p align="center">
   <a href="https://kaleidoscope24.com" target="_blank">
-    <img width="700" height="700" src="https://github.com/andiwebs/Kaleidoscope24/blob/main/kaleidoscope12923214235.gif" alt="Create Kaleidoscope and Mandalas kaleidoscope24.com">
+    <img width="700" height="700" src="https://github.com/andiwebs/Kaleidoscope24/blob/main/kaleidoscope12923214235.gif" alt="Create Kaleidoscope and Mandalas kaleidoscope24.com" style="height:auto;">
   </a><br> Animated GIF Image kaleidoscope12923214235.gif, 700 x 700 px, 1.61 MB
 </p>
 <p align="center">
